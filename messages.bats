@@ -19,3 +19,9 @@ source ./messages.sh
   [ "$status" -eq 1 ]
   [ "$output" = "E `tput setaf 1`my text`tput sgr0`" ]
 }
+
+@test "message example" {
+  run ./examples/messages-example.sh
+  [ "$status" -eq 0 ]
+  [ "$output" = "I `tput setaf 3`scripts installed`tput sgr0`" ]
+}

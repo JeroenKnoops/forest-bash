@@ -1,4 +1,4 @@
 #!/bin/bash
-source ../messages.sh
+source ./messages.sh
 
 info "scripts installed"
