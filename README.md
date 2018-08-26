@@ -37,6 +37,6 @@ Example:
 We're using [bats](https://github.com/sstephenson/bats) to test our scripts.
 
 Run test suite:
-`bats *.bats
+`bats *.bats`
 
 
