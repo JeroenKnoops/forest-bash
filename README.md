@@ -10,10 +10,27 @@ This library will be define some handy scripts which can be used in bash scripts
 
 ### Messages
 
-Currently:
+Functions:
 - info
 - success
 - error
+
+Usage: 
+
+Copy message script in your project:
+```
+wget https://raw.githubusercontent.com/JeroenKnoops/forest-bash/master/messages.sh forest/bin/messages.sh
+```
+
+```
+#!/bin/bash
+source ./forest/bin/messages.sh
+
+info "scripts installed"
+```
+
+Example:
+  `\examples\messages-example.sh`
 
 ## Tests
 
