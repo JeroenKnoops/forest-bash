@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://github.com/JeroenKnoops/forest-bash/blob/master/messages.sh
+
 set -e
 
 RED=`tput setaf 1`
