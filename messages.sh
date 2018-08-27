@@ -7,6 +7,7 @@ set -e
 RED=`tput setaf 1`
 GREEN=`tput setaf 2`
 YELLOW=`tput setaf 3`
+BLUE=`tput setaf 4`
 RESET=`tput sgr0`
 
 function info {
@@ -20,5 +21,9 @@ function success {
 function error {
   echo "E ${RED}$1${RESET}"
   exit 1
+}
+
+function warn {
+  echo "W ${BLUE}$1${RESET}"
 }
 

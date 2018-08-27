@@ -14,12 +14,13 @@ Functions:
 - info
 - success
 - error
+- warn
 
 Usage: 
 
 Copy message script in your project:
 ```
-wget https://raw.githubusercontent.com/JeroenKnoops/forest-bash/master/messages.sh forest/bin/messages.sh
+wget https://raw.githubusercontent.com/JeroenKnoops/forest-bash/master/messages.sh -o forest/bin/messages.sh
 ```
 
 ```
