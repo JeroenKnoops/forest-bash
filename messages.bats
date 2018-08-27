@@ -23,7 +23,7 @@ source ./messages.sh
 @test "warn" {
   run warn 'my text'
   [ "$status" -eq 0 ]
-  [ "$output" = "W `tput setaf 3`my text`tput sgr0`" ]
+  [ "$output" = "W `tput setaf 4`my text`tput sgr0`" ]
 }
 
 @test "message example" {
