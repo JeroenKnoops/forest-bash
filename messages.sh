@@ -10,6 +10,15 @@ YELLOW=`tput setaf 3`
 BLUE=`tput setaf 4`
 RESET=`tput sgr0`
 
+function big() {
+    hash figlet &> /dev/null
+    if [ $? -eq 1 ]; then
+        echo >&2 "$1"
+    else
+        figlet -f small $1
+    fi
+}
+
 function info {
   echo "I ${YELLOW}$1${RESET}"
 }

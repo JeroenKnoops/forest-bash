@@ -15,6 +15,7 @@ Functions:
 - success
 - error
 - warn
+- big
 
 Usage: 
 

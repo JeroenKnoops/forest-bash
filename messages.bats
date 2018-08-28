@@ -26,6 +26,35 @@ source ./messages.sh
   [ "$output" = "W `tput setaf 4`my text`tput sgr0`" ]
 }
 
+@test "big-figlet" {
+  run big 'blurk'
+
+  blurk=$(cat <<-EOM
+ _    _          _   
+| |__| |_  _ _ _| |__
+| '_ \ | || | '_| / /
+|_.__/_|\_,_|_| |_\_\\
+                     
+EOM
+  )
+
+  [ "$status" -eq 0 ]
+  set -- "$blurk"
+  declare -a Array=($*)
+
+  [ "${lines[0]}" = "${Array[0]}" ]
+  [ "${lines[1]}" = "${Array[1]}" ]
+  [ "${lines[2]}" = "${Array[2]}" ]
+  [ "${lines[3]}" = "${Array[3]}" ]
+  [ "${lines[4]}" = "${Array[4]}" ]
+}
+
+@test "big-no-figlet" {
+  skip
+  run big 'blurk'
+  [ "$output" = "I `tput setaf 3`scripts installed`tput sgr0`" ]
+}
+
 @test "message example" {
   run ./examples/messages-example.sh
   [ "$status" -eq 0 ]
