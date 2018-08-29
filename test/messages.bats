@@ -27,6 +27,7 @@ source ./messages.sh
 }
 
 @test "big-figlet" {
+  skip
   run big 'blurk'
 
   blurk=$(cat <<-EOM
@@ -50,9 +51,8 @@ EOM
 }
 
 @test "big-no-figlet" {
-  skip
   run big 'blurk'
-  [ "$output" = "I `tput setaf 3`scripts installed`tput sgr0`" ]
+  [ "$output" = "blurk" ]
 }
 
 @test "message example" {
