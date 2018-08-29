@@ -11,12 +11,14 @@ BLUE=`tput setaf 4`
 RESET=`tput sgr0`
 
 function big() {
+    set +e
     hash figlet &> /dev/null
     if [ $? -eq 1 ]; then
         echo >&2 "$1"
     else
         figlet -f small $1
     fi
+    set -e
 }
 
 function info {
