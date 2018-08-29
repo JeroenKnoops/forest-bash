@@ -51,6 +51,7 @@ EOM
 }
 
 @test "big-no-figlet" {
+  skip
   run big 'blurk'
   [ "$output" = "blurk" ]
 }
