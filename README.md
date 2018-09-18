@@ -34,6 +34,28 @@ info "scripts installed"
 Example:
   `\examples\messages-example.sh`
 
+### Waitport
+
+Functions:
+- waitport
+
+Usage: 
+
+Copy waitport script in your project:
+```
+wget https://raw.githubusercontent.com/JeroenKnoops/forest-bash/master/waitport.sh -o forest/bin/waitport.sh
+```
+
+```
+#!/bin/bash
+source ./forest/bin/waitport.sh
+
+waitport 80
+```
+
+Example:
+  `\examples\waitport-example.sh`
+
 ## Tests
 
 We're using [bats](https://github.com/sstephenson/bats) to test our scripts.
