@@ -5,25 +5,27 @@ source ./messages.sh
 @test "info" {
   run info 'my text'
   [ "$status" -eq 0 ]
-  [ "$output" = "I `tput setaf 3`my text`tput sgr0`" ]
+  [ "$output" = "   INFO:    `tput setaf 3`my text`tput sgr0`" ]
 }
 
 @test "success" {
   run success 'my text'
   [ "$status" -eq 0 ]
-  [ "$output" = "S `tput setaf 2`my text`tput sgr0`" ]
+
+  [ "${lines[0]}" = "   SUCCESS: `tput setaf 2`my text`tput sgr0`" ]
+  [ "${lines[1]}" = "   =====================================================================================" ]
 }
 
 @test "error" {
   run error 'my text'
   [ "$status" -eq 1 ]
-  [ "$output" = "E `tput setaf 1`my text`tput sgr0`" ]
+  [ "$output" = "   ERROR:   `tput setaf 1`my text`tput sgr0`" ]
 }
 
 @test "warn" {
   run warn 'my text'
   [ "$status" -eq 0 ]
-  [ "$output" = "W `tput setaf 4`my text`tput sgr0`" ]
+  [ "$output" = "   WARN:    `tput setaf 4`my text`tput sgr0`" ]
 }
 
 @test "big-figlet" {
@@ -59,5 +61,5 @@ EOM
 @test "message example" {
   run ./examples/messages-example.sh
   [ "$status" -eq 0 ]
-  [ "$output" = "I `tput setaf 3`scripts installed`tput sgr0`" ]
+  [ "$output" = "   INFO:    `tput setaf 3`scripts installed`tput sgr0`" ]
 }

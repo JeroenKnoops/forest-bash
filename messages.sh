@@ -22,19 +22,20 @@ function big() {
 }
 
 function info {
-  echo "I ${YELLOW}$1${RESET}"
+  echo "   INFO:    ${YELLOW}$1${RESET}"
 }
 
 function success {
-  echo "S ${GREEN}$1${RESET}"
+  echo "   SUCCESS: ${GREEN}$1${RESET}"
+  echo "   ====================================================================================="
 }
 
 function error {
-  echo "E ${RED}$1${RESET}"
+  echo "   ERROR:   ${RED}$1${RESET}"
   exit 1
 }
 
 function warn {
-  echo "W ${BLUE}$1${RESET}"
+  echo "   WARN:    ${BLUE}$1${RESET}"
 }
 
