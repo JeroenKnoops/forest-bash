@@ -56,6 +56,29 @@ waitport 80
 Example:
   `\examples\waitport-example.sh`
 
+### include
+
+Functions:
+- include
+
+Usage: 
+
+Copy include script in your project:
+```
+wget https://raw.githubusercontent.com/JeroenKnoops/forest-bash/master/include.sh -o forest/bin/include.sh
+```
+
+```
+#!/bin/bash
+source ./forest/bin/include.sh
+
+include i-do-no-exist.txt
+include i-exist.txt 
+```
+
+Example:
+  `\examples\include-example.sh`
+
 ## Tests
 
 We're using [bats](https://github.com/sstephenson/bats) to test our scripts.
