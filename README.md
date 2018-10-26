@@ -37,7 +37,7 @@ Example:
 ### Waitport
 
 Functions:
-- waitport
+- waitport --> It will wait until a port is reachable
 
 Usage: 
 
